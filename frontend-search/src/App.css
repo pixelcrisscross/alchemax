@@ -1,0 +1,325 @@
+/* --- Reset & Base --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  background: white;
+  padding: 60px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: #1a202c;
+}
+
+.highlight {
+  color: #3182ce; /* Blue */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #718096;
+  margin-bottom: 30px;
+}
+
+/* --- Search Bar --- */
+.search-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px 16px 50px;
+  font-size: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+}
+
+.results-count {
+  margin-top: 15px;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+/* --- Job Grid --- */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* --- Job Card --- */
+.job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #edf2f7;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Card Header (Badges) --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.verified {
+  background-color: #def7ec;
+  color: #046c4e;
+}
+
+.badge.unverified {
+  background-color: #fefcbf;
+  color: #975a16;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+/* --- Card Content --- */
+.job-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.company-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #718096;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* --- Meta Box --- */
+.meta-box {
+  background-color: #f7fafc;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.meta-item svg {
+  color: #cbd5e0;
+}
+
+/* --- Card Footer --- */
+.card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.source-info {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.source-info strong {
+  color: #718096;
+}
+
+.apply-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.btn-blue {
+  background-color: #3182ce;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-gray {
+  background-color: #718096;
+  color: white;
+}
+
+.btn-gray:hover {
+  background-color: #4a5568;
+}
+
+/* --- Status States --- */
+.status-message {
+  text-align: center;
+  color: #718096;
+  margin-top: 50px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.spin svg {
+  animation: spin 1s linear infinite;
+  color: #3182ce;
+}
+
+.error {
+  color: #e53e3e;
+  background: #fff5f5;
+  padding: 20px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.empty {
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- AI Features (Layer 3) --- */
+.ai-prompt-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px dashed #cbd5e1;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ai-result-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #818cf8;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.ai-summary {
+    color: #475569;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
